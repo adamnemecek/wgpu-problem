@@ -51,4 +51,15 @@ impl Device {
             size
         }
     }
+
+
+    pub fn create_command_encoder(self) -> wgpu::CommandEncoder {
+        self.device.create_command_encoder(&wgpu::CommandEncoderDescriptor { todo: 0 })
+    }
+
+    pub fn get_next_texture<'a>(&'a mut self) -> wgpu::SwapChainOutput<'a> {
+        self.swap_chain.get_next_texture()
+    }
+
+
 }
