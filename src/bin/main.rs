@@ -1,8 +1,10 @@
 
 use wgpu_problem::{
-    App
+    // App,
+    app
 };
 
 fn main() {
-    let app = App::new();
+    // let app = App::new();
+    app()
 }

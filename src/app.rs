@@ -7,3 +7,7 @@ impl App {
         todo!()
     }
 }
+
+pub fn app() {
+    
+}
