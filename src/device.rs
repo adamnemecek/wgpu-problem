@@ -1,5 +1,7 @@
+
 pub struct Device {
-    device: wgpu::Device
+    device: wgpu::Device,
+    window: winit::window::Window,
 }
 
 impl Device {

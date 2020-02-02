@@ -1,17 +1,11 @@
 
-pub struct Device {
-    device: wgpu::Device
-}
 
-impl Device {
-    pub fn new() -> Self {
-        // let device = 
-        todo!()
-    }
-}
+use {
+    crate::Window
+};
 
 pub struct App {
-    device: wgpu::Device
+    window: Window
 }
 
 impl App {
@@ -20,11 +14,8 @@ impl App {
         todo!()
     }
 
-    pub fn get_next_texture<'a>(self) -> wgpu::SwapChainOutput<'a> {
-        todo!()
-    }
+}
 
-    pub fn create_command_encoder(self) -> wgpu::CommandEncoder {
-        todo!()
-    }
+pub fn app() {
+
 }
