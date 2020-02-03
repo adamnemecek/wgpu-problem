@@ -52,7 +52,6 @@ impl Device {
         }
     }
 
-
     pub fn get_next_texture(&mut self) -> wgpu::SwapChainOutput {
         self.swap_chain.get_next_texture()
     }
