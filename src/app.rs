@@ -20,11 +20,11 @@ impl App {
     }
 
 
-    pub fn get_next_texture<'a>(&'a mut self) -> wgpu::SwapChainOutput<'a> {
+    pub fn get_next_texture(&mut self) -> wgpu::SwapChainOutput{
         self.window.device.swap_chain.get_next_texture()
     }
 
-    pub fn create_command_encoder(&mut self) -> wgpu::CommandEncoder {
+    pub fn create_command_encoder(self) -> wgpu::CommandEncoder {
         self.window.device.device.create_command_encoder(&wgpu::CommandEncoderDescriptor { todo: 0 })
         // todo!()
     }
