@@ -1,16 +1,12 @@
 
 use winit::{
-    dpi::PhysicalPosition,
-    // event::{ElementState, Event, ModifiersState, MouseScrollDelta, VirtualKeyCode, WindowEvent},
-    event_loop::{ControlFlow, EventLoop, EventLoopWindowTarget},
-    window::{CursorIcon, WindowBuilder},
+    event_loop::{EventLoop},
+    window::{WindowBuilder},
 };
 
 use crate::{
     Device
 };
-
-
 
 pub struct Window {
     pub window: winit::window::Window,
