@@ -20,14 +20,14 @@ impl App {
     }
 
     pub fn get_next_texture(&mut self) -> wgpu::SwapChainOutput{
-        self.window.device.swap_chain.get_next_texture()
+        self.window.device.get_next_texture()
     }
 
-    pub fn create_command_encoder(self) -> wgpu::CommandEncoder {
-        self.window.device.device.create_command_encoder(&wgpu::CommandEncoderDescriptor { todo: 0 })
+    pub fn create_command_encoder(&self) -> wgpu::CommandEncoder {
+        self.window.device.create_command_encoder()
     }
 
-    pub fn redraw<'a>(&'a mut self) {
+    pub fn redraw(&mut self) {
         let frame = self.get_next_texture();
         let encoder = self.create_command_encoder();
         // compiler error

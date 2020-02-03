@@ -26,5 +26,4 @@ impl Window {
             device
         }
     }
-
 }

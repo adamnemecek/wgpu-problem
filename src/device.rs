@@ -18,8 +18,8 @@ fn create_swap_chain(
 
 pub struct Device {
     pub(crate) adapter: wgpu::Adapter,
-    pub(crate) device: wgpu::Device,
-    pub(crate) swap_chain: wgpu::SwapChain,
+    device: wgpu::Device,
+    swap_chain: wgpu::SwapChain,
     pub(crate) surface: wgpu::Surface,
     pub(crate) size: winit::dpi::PhysicalSize<u32>,
 }
@@ -53,13 +53,12 @@ impl Device {
     }
 
 
-    pub fn create_command_encoder(self) -> wgpu::CommandEncoder {
-        self.device.create_command_encoder(&wgpu::CommandEncoderDescriptor { todo: 0 })
-    }
-
-    pub fn get_next_texture<'a>(&'a mut self) -> wgpu::SwapChainOutput<'a> {
+    pub fn get_next_texture(&mut self) -> wgpu::SwapChainOutput {
         self.swap_chain.get_next_texture()
     }
 
+    pub fn create_command_encoder(&self) -> wgpu::CommandEncoder {
+        self.device.create_command_encoder(&wgpu::CommandEncoderDescriptor { todo: 0 })
+    }
 
 }
