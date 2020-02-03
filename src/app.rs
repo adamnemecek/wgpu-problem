@@ -29,11 +29,11 @@ impl App {
         // todo!()
     }
 
-    // pub fn redraw<'a>(&'a mut self, frame: &'a mut wgpu::SwapChainOutput) {
-    //     let frame = self.get_next_texture();
-    //     let encoder = self.create_command_encoder();
+    pub fn redraw<'a>(&'a mut self) {
+        let frame = self.get_next_texture();
+        let encoder = self.create_command_encoder();
 
-    // }
+    }
 
 }
 
@@ -42,21 +42,9 @@ pub fn app() {
     let mut app = App::new(&event_loop);
 
     event_loop.run(move |event, _, control_flow| match event {
+        Event::RedrawRequested(_) => {
+            app.redraw();
+        },
         _ => ()
-            // Event::RedrawRequested(_) => {
-
-
-            //     // let mut frame = app.get_next_texture();
-
-            //     // app.redraw(&mut frame);
-            //     // // {
-
-            //     // let encoder = app.create_command_encoder();
-            //     // }
-
-
-            // },
-
-
-        });
+    });
 }
