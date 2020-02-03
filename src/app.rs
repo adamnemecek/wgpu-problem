@@ -19,22 +19,19 @@ impl App {
         Self { window: Window::new(event_loop) }
     }
 
-
     pub fn get_next_texture(&mut self) -> wgpu::SwapChainOutput{
         self.window.device.swap_chain.get_next_texture()
     }
 
     pub fn create_command_encoder(self) -> wgpu::CommandEncoder {
         self.window.device.device.create_command_encoder(&wgpu::CommandEncoderDescriptor { todo: 0 })
-        // todo!()
     }
 
     pub fn redraw<'a>(&'a mut self) {
         let frame = self.get_next_texture();
         let encoder = self.create_command_encoder();
-
+        // compiler error
     }
-
 }
 
 pub fn app() {
