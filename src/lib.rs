@@ -7,7 +7,3 @@ pub use {
     device::*,
     window::*,
 };
-
-fn main() {
-    println!("Hello, world!");
-}
